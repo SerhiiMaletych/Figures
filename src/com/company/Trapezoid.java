@@ -12,7 +12,7 @@ public class Trapezoid implements Figure {
     }
 
     @Override
-    public String findColor() {
-        return null;
+    public Color findColor() {
+        return Color.randomColor();
     }
 }

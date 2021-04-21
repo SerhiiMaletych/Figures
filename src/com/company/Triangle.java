@@ -16,8 +16,8 @@ public class Triangle implements Figure {
     }
 
     @Override
-    public String findColor() {
-        return null;
+    public Color findColor() {
+        return Color.randomColor();
     }
 
     public double findHypotenuse() {

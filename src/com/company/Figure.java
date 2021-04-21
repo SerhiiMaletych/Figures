@@ -4,5 +4,5 @@ public interface Figure {
 
     public double draw();
     public double calculateArea();
-    public String findColor();
+    public  Color findColor();
 }

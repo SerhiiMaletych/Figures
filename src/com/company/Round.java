@@ -17,8 +17,8 @@ public class Round implements Figure {
     }
 
     @Override
-    public String findColor() {
-        return null;
+    public Color findColor() {
+        return Color.randomColor();
     }
 
     public int findRadius() {
