@@ -2,16 +2,16 @@ package com.company;
 
 public class Square implements Figure {
 
-    private double side;
-    private double perimeter;
+    private final double side = Math.random() * 100;
+
     @Override
-    public double draw() {
-        return 0;
+    public String draw() {
+        return "It's a square!";
     }
 
     @Override
     public double calculateArea() {
-        return 0;
+        return side * side;
     }
 
     @Override
@@ -19,8 +19,9 @@ public class Square implements Figure {
         return Color.randomColor();
     }
 
-    public double findSide() {
-        side=perimeter/4;
-        return side;
+    public double findPerimeter() {
+        return side * 4;
     }
+
+
 }

@@ -2,17 +2,18 @@ package com.company;
 
 public class Triangle implements Figure {
 
-    private double firstLeg;
-    private double secondLeg;
-    private double hypotenuse;
+    private final double firstLeg = Math.random() * 100;
+    private final double secondLeg = Math.random() * 100;
+    private final double corner = Math.random() * 90;
+
     @Override
-    public double draw() {
-        return 0;
+    public String draw() {
+        return "It's a triangle";
     }
 
     @Override
     public double calculateArea() {
-        return 0;
+        return (0.5 * firstLeg * secondLeg * Math.sin(corner));
     }
 
     @Override
@@ -21,7 +22,6 @@ public class Triangle implements Figure {
     }
 
     public double findHypotenuse() {
-        hypotenuse= Math.sqrt((firstLeg*firstLeg+secondLeg*secondLeg));
-        return hypotenuse;
+        return Math.sqrt((firstLeg * firstLeg + secondLeg * secondLeg));
     }
 }

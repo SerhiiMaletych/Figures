@@ -1,19 +1,19 @@
 package com.company;
 
+
 public class Round implements Figure {
-    private double area;
-    private double radius;
-    private double point;
+
+    private final double radius = Math.random() * 100;
 
 
     @Override
-    public double draw() {
-        return point+radius;
+    public String draw() {
+        return "It's a round!";
     }
 
     @Override
     public double calculateArea() {
-        return 0;
+        return Math.PI * radius * radius;
     }
 
     @Override
@@ -21,7 +21,12 @@ public class Round implements Figure {
         return Color.randomColor();
     }
 
-    public int findRadius() {
-        return 0;
+    public double getRadius() {
+        return radius;
+    }
+
+    public String toString() {
+        return "Figure: " + draw() + " area: " + calculateArea() +
+                " color: " + findColor() + " radius: " + getRadius();
     }
 }
