@@ -2,18 +2,22 @@ package com.company;
 
 public class Triangle implements Figure {
 
-    private final double firstLeg = Math.random() * 100;
-    private final double secondLeg = Math.random() * 100;
-    private final double corner = Math.random() * 90;
+    private double firstLeg;
+    private double secondLeg;
+    private double corner;
+
+    public Triangle() {
+
+    }
 
     @Override
     public String draw() {
-        return "It's a triangle";
+        return "It's a triangle!";
     }
 
     @Override
     public double calculateArea() {
-        return (0.5 * firstLeg * secondLeg * Math.sin(corner));
+        return (int)(0.5 * firstLeg * secondLeg * Math.sin(corner));
     }
 
     @Override
@@ -21,7 +25,25 @@ public class Triangle implements Figure {
         return Color.randomColor();
     }
 
+    @Override
+    public void initVariables() {
+        firstLeg = (int) (Math.random() * 100);
+        secondLeg = (int) (Math.random() * 100);
+        corner = (int) (Math.random() * 90);
+    }
+
     public double findHypotenuse() {
-        return Math.sqrt((firstLeg * firstLeg + secondLeg * secondLeg));
+        return (int)Math.sqrt((firstLeg * firstLeg + secondLeg * secondLeg));
+    }
+
+    public String calculate() {
+        initVariables();
+        if (Math.sin(corner) < 0) {
+
+            return "Figure: " + draw() + " WARNING! Sinus of corner between sides a and b is negative:" +
+                    " " + Math.sin(corner);
+        } else return
+                "Figure: " + draw() + " Area: " + calculateArea() +
+                        " Color: " + findColor() + " Hypotenuse: " + findHypotenuse();
     }
 }

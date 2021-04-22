@@ -1,15 +1,22 @@
 package com.company;
 
 public class Trapezoid implements Figure {
-    private final double topSide = Math.random() * 100;
-    private final double bottomSide = Math.random() * 100;
-    private final double leftSide = Math.random() * 100;
-    private final double rightSide = Math.random() * 100;
-    private final double height = Math.random() * 100;
+    private double topSide;
+    private double bottomSide;
+    private double leftSide;
+    private double rightSide;
+    private double height;
 
+    public void initVariables() {
+        topSide = (int) (Math.random() * 100);
+        bottomSide = (int) (Math.random() * 100);
+        leftSide = (int) (Math.random() * 100);
+        rightSide = (int) (Math.random() * 100);
+        height = (int) (Math.random() * 100);
+
+    }
 
     @Override
-
     public String draw() {
         return "It's a trapezoid";
     }
@@ -26,6 +33,11 @@ public class Trapezoid implements Figure {
 
     public double findPerimeter() {
         return leftSide + rightSide + bottomSide + topSide;
+    }
 
+    public String calculate() {
+      initVariables();
+        return "Figure: " + draw() + " Area: " + calculateArea() +
+                " Color: " + findColor() + " Perimeter: " + findPerimeter();
     }
 }

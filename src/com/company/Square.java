@@ -2,7 +2,8 @@ package com.company;
 
 public class Square implements Figure {
 
-    private final double side = Math.random() * 100;
+    private double side;
+
 
     @Override
     public String draw() {
@@ -19,8 +20,19 @@ public class Square implements Figure {
         return Color.randomColor();
     }
 
+    @Override
+    public void initVariables() {
+        side = (int) (Math.random() * 100);
+    }
+
     public double findPerimeter() {
         return side * 4;
+    }
+
+    public String calculate() {
+       initVariables();
+        return "Figure: " + draw() + " Area: " + calculateArea() +
+                " Color: " + findColor() + " Perimeter: " + findPerimeter();
     }
 
 

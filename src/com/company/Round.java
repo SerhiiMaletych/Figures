@@ -3,8 +3,7 @@ package com.company;
 
 public class Round implements Figure {
 
-    private final double radius = Math.random() * 100;
-
+    private double radius;
 
     @Override
     public String draw() {
@@ -21,12 +20,15 @@ public class Round implements Figure {
         return Color.randomColor();
     }
 
-    public double getRadius() {
-        return radius;
+    @Override
+    public void initVariables() {
+        radius = (int) (Math.random() * 100);
     }
 
-    public String toString() {
-        return "Figure: " + draw() + " area: " + calculateArea() +
-                " color: " + findColor() + " radius: " + getRadius();
+
+    public String calculate() {
+        initVariables();
+        return "Figure: " + draw() + " Area: " + calculateArea() +
+                " Color: " + findColor() + " Radius: " + radius;
     }
 }
