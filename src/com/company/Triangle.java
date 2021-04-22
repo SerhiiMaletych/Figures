@@ -17,7 +17,7 @@ public class Triangle implements Figure {
 
     @Override
     public double calculateArea() {
-        return (int)(0.5 * firstLeg * secondLeg * Math.sin(corner));
+        return (int) (0.5 * firstLeg * secondLeg * Math.sin(corner));
     }
 
     @Override
@@ -33,17 +33,23 @@ public class Triangle implements Figure {
     }
 
     public double findHypotenuse() {
-        return (int)Math.sqrt((firstLeg * firstLeg + secondLeg * secondLeg));
+        return (int) Math.sqrt((firstLeg * firstLeg + secondLeg * secondLeg));
+    }
+
+    public double findPerimeter() {
+        return firstLeg + secondLeg + findHypotenuse();
     }
 
     public String calculate() {
         initVariables();
         if (Math.sin(corner) < 0) {
 
-            return "Figure: " + draw() + " WARNING! Sinus of corner between sides a and b is negative:" +
-                    " " + Math.sin(corner);
+            return "Figure:" + draw() + " WARNING! Sinus of corner between sides a and b is negative:" +
+                    " " + Math.sin(corner) + "." + " Error occurred";
         } else return
-                "Figure: " + draw() + " Area: " + calculateArea() +
-                        " Color: " + findColor() + " Hypotenuse: " + findHypotenuse();
+                "Figure:" + draw() + ";" + " Area:" + calculateArea() + " m2" + ";" +
+                        " Color:" + findColor() + ";" + " Hypotenuse:" + findHypotenuse()
+                        + ";" + " First leg: " + firstLeg + ";" + " Second leg: " + secondLeg + ";" +
+                        " Perimeter: " + findPerimeter();
     }
 }

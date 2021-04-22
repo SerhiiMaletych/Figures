@@ -36,8 +36,8 @@ public class Trapezoid implements Figure {
     }
 
     public String calculate() {
-      initVariables();
-        return "Figure: " + draw() + " Area: " + calculateArea() +
-                " Color: " + findColor() + " Perimeter: " + findPerimeter();
+        initVariables();
+        return "Figure:" + draw() + ";" + " Area:" + calculateArea() + " m2" + ";" +
+                " Color:" + findColor() + ";" + " Perimeter:" + findPerimeter();
     }
 }

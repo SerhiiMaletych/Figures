@@ -12,7 +12,7 @@ public class Round implements Figure {
 
     @Override
     public double calculateArea() {
-        return Math.PI * radius * radius;
+        return (int) (Math.PI * radius * radius);
     }
 
     @Override
@@ -25,10 +25,14 @@ public class Round implements Figure {
         radius = (int) (Math.random() * 100);
     }
 
+    public double diameter() {
+        return radius + radius;
+    }
+
 
     public String calculate() {
         initVariables();
-        return "Figure: " + draw() + " Area: " + calculateArea() +
-                " Color: " + findColor() + " Radius: " + radius;
+        return "Figure:" + draw() + ";" + " Area:" + calculateArea() + " m2" + ";" +
+                " Color:" + findColor() + ";" + " Radius:" + radius + ";" + " Diameter:" + diameter();
     }
 }
