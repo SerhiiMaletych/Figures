@@ -31,8 +31,8 @@ public class Square implements Figure {
 
     public String calculate() {
         initVariables();
-        return "Figure:" + draw() + ";" + " Area:" + calculateArea() + ";" + " m2" +
-                " Color:" + findColor() + ";" + " Perimeter:" + findPerimeter() + ";" + " Side:" + side;
+        return "Figure:" + draw() + ";" + " Area:" + calculateArea() + " m2;" +
+                " Color:" + findColor() + ";" + " Perimeter:" + findPerimeter() + " m;" + " Side:" + side + " m;";
     }
 
 

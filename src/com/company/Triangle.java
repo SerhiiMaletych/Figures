@@ -47,9 +47,9 @@ public class Triangle implements Figure {
             return "Figure:" + draw() + " WARNING! Sinus of corner between sides a and b is negative:" +
                     " " + Math.sin(corner) + "." + " Error occurred";
         } else return
-                "Figure:" + draw() + ";" + " Area:" + calculateArea() + " m2" + ";" +
+                "Figure:" + draw() + ";" + " Area:" + calculateArea() + " m2;" +
                         " Color:" + findColor() + ";" + " Hypotenuse:" + findHypotenuse()
-                        + ";" + " First leg: " + firstLeg + ";" + " Second leg: " + secondLeg + ";" +
-                        " Perimeter: " + findPerimeter();
+                        + " m;" + " First leg: " + firstLeg + " m;" + " Second leg: " + secondLeg + " m;" +
+                        " Perimeter: " + findPerimeter() + " m;";
     }
 }

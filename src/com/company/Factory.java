@@ -12,23 +12,24 @@ public class Factory {
     Trapezoid trapezoid = new Trapezoid();
     Triangle triangle = new Triangle();
 
-    public void printRandomElement() {
-        ArrayList elements = new ArrayList();
-        for (int i = 0; i < Math.random() * 10000; i++) {
-            List <String>figures = Arrays.asList(round.calculate(),
+
+    public void printRandomElements() {
+        ArrayList<String> elements = new ArrayList();
+        for (int i = 0; i < Math.random() * 100000; i++) {
+            List<String> figures = Arrays.asList(round.calculate(),
                     square.calculate(),
                     trapezoid.calculate(),
                     triangle.calculate());
 
             int randomIndex = random.nextInt(figures.size());
-            String randomElement =  figures.get(randomIndex);
+            String randomElement = figures.get(randomIndex);
             System.out.println(randomElement);
             elements.add(randomElement);
             System.out.println("--------------------------------------------------------------------------------");
 
 
         }
-        System.out.println("Total number of figures: " +elements.size());
+        System.out.println("Total number of figures: " + elements.size());
     }
 
 }
