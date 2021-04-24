@@ -1,6 +1,8 @@
 package com.company;
 
 public class Trapezoid implements Figure {
+
+
     private double topSide;
     private double bottomSide;
     private double leftSide;
@@ -39,5 +41,26 @@ public class Trapezoid implements Figure {
         initVariables();
         return "Figure:" + draw() + ";" + " Area:" + calculateArea() + " m2;" +
                 " Color:" + findColor() + ";" + " Perimeter:" + findPerimeter() + " m;";
+    }
+
+
+    public void setTopSide(double topSide) {
+        this.topSide = topSide;
+    }
+
+    public void setBottomSide(double bottomSide) {
+        this.bottomSide = bottomSide;
+    }
+
+    public void setLeftSide(double leftSide) {
+        this.leftSide = leftSide;
+    }
+
+    public void setRightSide(double rightSide) {
+        this.rightSide = rightSide;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
     }
 }

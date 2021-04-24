@@ -52,4 +52,16 @@ public class Triangle implements Figure {
                         + " m;" + " First leg: " + firstLeg + " m;" + " Second leg: " + secondLeg + " m;" +
                         " Perimeter: " + findPerimeter() + " m;";
     }
+
+    public void setFirstLeg(double firstLeg) {
+        this.firstLeg = firstLeg;
+    }
+
+    public void setSecondLeg(double secondLeg) {
+        this.secondLeg = secondLeg;
+    }
+
+    public void setCorner(double corner) {
+        this.corner = corner;
+    }
 }

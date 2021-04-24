@@ -2,8 +2,12 @@ package com.company;
 
 public class Square implements Figure {
 
+
     private double side;
 
+    public void setSide(double side) {
+        this.side = side;
+    }
 
     @Override
     public String draw() {
