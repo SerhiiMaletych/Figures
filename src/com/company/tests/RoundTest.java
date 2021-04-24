@@ -19,10 +19,8 @@ class RoundTest {
     }
 
     @Test
-    void findColor() {
-    }
-
-    @Test
     void findDiameter() {
+        round.setRadius(10);
+        assertEquals(round.findDiameter(), 20);
     }
 }

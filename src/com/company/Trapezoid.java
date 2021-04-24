@@ -2,7 +2,6 @@ package com.company;
 
 public class Trapezoid implements Figure {
 
-
     private double topSide;
     private double bottomSide;
     private double leftSide;
