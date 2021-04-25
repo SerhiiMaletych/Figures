@@ -43,7 +43,6 @@ public class Triangle implements Figure {
     public String calculate() {
         initVariables();
         if (Math.sin(corner) < 0) {
-
             return "Figure:" + draw() + " WARNING! Sinus of corner between sides a and b is negative:" +
                     " " + Math.sin(corner) + "." + " Error occurred";
         } else return
